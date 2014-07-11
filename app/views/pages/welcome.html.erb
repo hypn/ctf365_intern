@@ -1,0 +1,34 @@
+<%
+  people = [
+    {name: 'Marius 1', url: 'http://ctf365.com/assets/landingpage/profile/marius3.jpg'},
+    {name: 'Marius 2', url: 'http://ctf365.com/assets/landingpage/profile/mariuschis.jpg'},
+    {name: 'Ionut', url: 'http://ctf365.com/assets/landingpage/profile/ionutpopovici.jpg'},
+    {name: 'Ross', url: 'http://ctf365.com/assets/landingpage/profile/ross_simpson.jpg'},
+    {name: 'Cezar', url: 'http://ctf365.com/assets/landingpage/profile/cezarandrici.jpg'},
+    {name: 'Chris', url: 'http://ctf365.com/assets/landingpage/profile/profile-chris.jpg'}
+  ]
+%>
+<div id="about" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="span12"> 
+        
+        <!-- About profiles -->
+        <h1>About <span>Us</span></h1>
+        <p class="lead">Meet the CTF365 Dream Team<br /></p>
+        
+        <ul class="thumbnails">
+          <% people.each do |person| %>
+            <li class="span2"> <!-- About single profile -->
+              <div class="thumbnail hover about-profile">
+                <img src="<%= person[:url] %>" />
+                <h4><%= person[:name] %></h4>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</div>
